@@ -1,6 +1,6 @@
 import { Navbar, Container, Nav } from 'react-bootstrap';
 
-import { Switch, Route, Link } from 'react-router-dom';
+import { Routes, Route, Link } from 'react-router-dom';
 
 import Home from './pages/Home';
 
@@ -38,7 +38,7 @@ function App() {
 				</Container>
 			</Navbar>
 
-			<Switch>
+			<Routes>
 				<Route exact path='/' component={Home} />
 				<Route exact path='/posts' component={PostIndex} />
 				<Route
@@ -51,7 +51,7 @@ function App() {
 					path='/posts/edit/:id'
 					component={PostEdit}
 				/>
-			</Switch>
+			</Routes>
 		</div>
 	);
 }
